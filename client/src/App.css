@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body {
+   background-color: #EAF2EF;
+}
+
+.card {
+  background-color: bisque
+}
+
+.card-header {
+  height: 50px;
+  width: 100%;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.row > div[class*='col-'] {
+  display: flex;
+}
+
+.card-deck {
+   flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    display: flex;
+    flex-direction: column;
+}
