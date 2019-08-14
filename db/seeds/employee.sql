@@ -1,0 +1,10 @@
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('luukas','tuominen','luukas.tuominen@example.com','09-412-845','https://randomuser.me/api/portraits/thumb/men/26.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('marie','owens','marie.owens@example.com','0113350 500 9952','https://randomuser.me/api/portraits/thumb/women/81.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('lias','brataas','lias.brataas@example.com','75005846','https://randomuser.me/api/portraits/thumb/men/13.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('becky','holland','becky.holland@example.com','015396 96151','https://randomuser.me/api/portraits/thumb/women/50.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('jacob','alexander','jacob.alexander@example.com','04-1370-5542','https://randomuser.me/api/portraits/thumb/men/19.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('darrell','lucas','darrell.lucas@example.com','071-004-3004','https://randomuser.me/api/portraits/thumb/men/38.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('stephanie','sullivan','stephanie.sullivan@example.com','01-0822-1126','https://randomuser.me/api/portraits/thumb/women/10.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('simauro','souza','simauro.souza@example.com','(86) 9011-4031','https://randomuser.me/api/portraits/thumb/men/10.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('stevie','koeiman','stevie.koeiman@example.com','(630)-511-0566','https://randomuser.me/api/portraits/thumb/women/1.jpg');
+INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES('greg','harvey','greg.harvey@example.com','(199)-426-0409','https://randomuser.me/api/portraits/thumb/men/82.jpg');
