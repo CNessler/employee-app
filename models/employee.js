@@ -12,20 +12,17 @@ const Employee = {};
 
 // Returns all employees from the table
 Employee.findAll = () => {
-    return db.query(
-        `SELECT * FROM employees`
-    );
+  return db.query(`SELECT * FROM employees;`);
 };
 
 // Return one employee with the specific id
 Employee.findById = (id) => {
-    return db.oneOrNone(
-        `
+  return db.oneOrNone(
+      `
       SELECT * FROM employees
       WHERE id = $1
     `,
-        [id]
-    );
+      [id]);
 };
 
 // Export the Employee object
