@@ -1,21 +1,27 @@
-// models/employees.js
-
-// Import the database
 const db = require('../db/config');
-
-// Instantiate a new object.
-// This will interface with the employees-app database.
-// Specifically, the employees table.
 const Employee = {};
 
-// Define methods for the Employee object
+Employee.add = (data) => {
+  console.log(data)
+  return db.query(
+            'INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES(' +
+            '\'' + data.firstName + '\'' +
+            ',' +
+            '\'' + data.lastName + '\'' +
+            ',' +
+            '\'' + data.email + '\'' +
+            ',' +
+            '\'' + data.phone + '\'' +
+            ',' +
+            '\'' + data.photoUrl + '\'' +
+            ');'
+            )
+}
 
-// Returns all employees from the table
 Employee.findAll = () => {
   return db.query(`SELECT * FROM employees;`);
 };
 
-// Return one employee with the specific id
 Employee.findById = (id) => {
   return db.oneOrNone(
       `
@@ -25,5 +31,14 @@ Employee.findById = (id) => {
       [id]);
 };
 
-// Export the Employee object
+Employee.delete = (id) => {
+  return db.query('DELETE FROM employees WHERE id = ' + id )
+}
+
+Employee.edit = (data, id) => {
+  console.log(data, "   ", id)
+  return db.query('UPDATE employees SET first_name= \'' + data.firstName + '\', last_name=\'' + data.lastName + '\', email=\'' + data.email + '\', phone=\'' + data.phone + '\', picture=\'' + data.photoUrl + '\' WHERE id = ' + id
+            )
+}
+
 module.exports = Employee;

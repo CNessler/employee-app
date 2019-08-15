@@ -30,7 +30,6 @@ function performRequest() {
             ');' +
             '\n';
       }
-      console.log(inserts)
     });
   });
   req.end();

@@ -1,37 +1,45 @@
 const Employee = require('../models/employee');
 const employeeController = {};
 
-// Controller method for handling a request for all employees
+employeeController.add = (req, res) => {
+  Employee.add(req)
+  .catch(err => {
+    res.status(500).json({err});
+  });
+}
+
+employeeController.delete = (req, res) => {
+  Employee.delete(req.params.id)
+  .catch(err => {
+    res.status(500).json({err});
+  });
+}
+
 employeeController.findAll = (req, res) => {
-  // Uses the findAll method from Employee
   Employee.findAll()
       .then(employees => {
-        // Sends the employees as a JSON object
         res.json({message: 'Success', data: employees});
       })
       .catch(err => {
-        // If something goes wrong it logs the error in the console and sends it
-        // as a JSON object
-        console.log(err);
         res.status(500).json({err});
       });
 };
 
-// Controller method for handling a request for a single employee
 employeeController.findById = (req, res) => {
-  // Employees method for finding by id, passes the id as an argument
   Employee.findById(req.params.id)
       .then(employee => {
-        // Sends the employee as a JSON object
         res.json({message: 'Success', data: employee});
       })
       .catch(err => {
-        // If something goes wrong it logs the error in the console and sends it
-        // as a JSON object
-        console.log(err);
         res.status(500).json({err});
       });
 };
 
-// Export the controller
+employeeController.edit = (req, res) => {
+  Employee.edit(req.body, req.params.id)
+  .catch(err => {
+    res.status(500).json({err});
+  });
+}
+
 module.exports = employeeController;

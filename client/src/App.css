@@ -11,7 +11,8 @@ body {
 }
 
 .card {
-  background-color: bisque
+  background-color: bisque;
+  margin-top: 3em;
 }
 
 .card-header {
@@ -30,9 +31,20 @@ body {
 
 .card-deck {
    flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+#delete {
+  float:right;
+}
+
+.img-holder {position: relative;}
+.img-holder .link {
+    position: absolute;
+    bottom: 10px; /*your button position*/
+    right: 10px; /*your button position*/
 }

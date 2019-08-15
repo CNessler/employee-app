@@ -21,5 +21,13 @@ const employeeController = require('../controllers/employee-controller');
 
 router.get('/', employeeController.findAll);
 
-// Export the router
+router.post('/add', function (req, res) {
+    employeeController.add(req.body)
+    res.send('POST request to the homepage')
+})
+
+router.post('/delete/:id', employeeController.delete)
+
+router.post('/edit/:id', employeeController.edit)
+
 module.exports = router;
