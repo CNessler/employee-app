@@ -2,7 +2,6 @@ const db = require('../db/config');
 const Employee = {};
 
 Employee.add = (data) => {
-  console.log(data)
   return db.query(
             'INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES(' +
             '\'' + data.firstName + '\'' +
@@ -16,6 +15,23 @@ Employee.add = (data) => {
             '\'' + data.photoUrl + '\'' +
             ');'
             )
+}
+
+Employee.seed = (data) => {
+  console.log(data)
+  return db.query(
+            'INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES(' +
+            '\'' + data.name.first + '\'' +
+            ',' +
+            '\'' + data.name.last + '\'' +
+            ',' +
+            '\'' + data.email + '\'' +
+            ',' +
+            '\'' + data.phone + '\'' +
+            ',' +
+            '\'' + data.picture.thumbnail + '\'' +
+            ');'
+  )
 }
 
 Employee.findAll = () => {

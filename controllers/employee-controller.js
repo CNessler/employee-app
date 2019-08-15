@@ -8,6 +8,14 @@ employeeController.add = (req, res) => {
   });
 }
 
+employeeController.seed = (req, res) => {
+  console.log(req)
+  Employee.seed(req)
+  .catch(err => {
+    res.status(500).json({err});
+  });
+}
+
 employeeController.delete = (req, res) => {
   Employee.delete(req.params.id)
   .catch(err => {
