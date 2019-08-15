@@ -52,20 +52,23 @@ class Home extends React.Component {
         return (
         <Container>
             <div>
-            <Button className="btn btn-primary" onClick={() =>this.changeState("add")}>Add Employee</Button>
+            <Button className="btn btn-large" color="primary" id="addButton" onClick={() =>this.changeState("add")}>Add Employee</Button>
             {data}
             <div className="row">
             {this.state.response.map((response, key) => 
-                <div className="col-sm-3">
+                <div className="col-md-3">
                     <div className="card">
                         <div className="delete">
                             <Button id="delete" className="btn btn-danger btn-small" onClick={() =>this.delete(response)}>X</Button>
-                            <Button id="delete" className="btn btn-small" onClick={() =>this.editState(response)}>edit</Button>
+                            <Button id="edit" className="btn btn-small" onClick={() =>this.editState(response)}>edit</Button>
                         </div>
                         <img className="card-img-top" src={response.picture} alt="Card image cap"/>
                         <div className="card-body">
                         <h5 className="card-title">{response.first_name} {response.last_name}</h5>
-                        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text">
+                            <strong>Email:</strong><br/>{response.email}<br/>
+                            <strong>Phone:</strong><br/>{response.phone}<br/>
+                        </p>
                         </div>
                     </div>
                 </div>

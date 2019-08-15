@@ -29,23 +29,23 @@ class AddForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
             <label htmlFor="firstName">Enter first name</label>
-            <input id="firstName" name="firstName" type="text" />
+            <input id="firstName" name="firstName" type="text" className="form-control" />
         </div>
         <div className="form-group">
             <label htmlFor="lastName">Enter last name</label>
-            <input id="lastName" name="lastName" type="text" />
+            <input id="lastName" className="form-control" name="lastName" type="text" />
         </div>
         <div className="form-group">
             <label htmlFor="email">Enter your email</label>
-            <input id="email" name="email" type="email" />
+            <input id="email" className="form-control" name="email" type="email" />
         </div>
         <div className="form-group">
             <label htmlFor="photoUrl">Enter a url to your photo</label>
-            <input id="photoUrl" name="photoUrl" type="text" />
+            <input id="photoUrl" className="form-control" name="photoUrl" type="text" />
         </div>
         <div className="form-group">
             <label htmlFor="phone">Enter a phone number</label>
-            <input id="phone" name="phone" type="text" />
+            <input id="phone" className="form-control" name="phone" type="text" />
         </div>
         <button onClick={this.props.triggerUpdate}>Add employee</button>
       </form>

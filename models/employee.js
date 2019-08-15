@@ -18,7 +18,6 @@ Employee.add = (data) => {
 }
 
 Employee.seed = (data) => {
-  console.log(data)
   return db.query(
             'INSERT INTO employees(first_name, last_name, email, phone, picture) VALUES(' +
             '\'' + data.name.first + '\'' +
@@ -52,7 +51,6 @@ Employee.delete = (id) => {
 }
 
 Employee.edit = (data, id) => {
-  console.log(data, "   ", id)
   return db.query('UPDATE employees SET first_name= \'' + data.firstName + '\', last_name=\'' + data.lastName + '\', email=\'' + data.email + '\', phone=\'' + data.phone + '\', picture=\'' + data.photoUrl + '\' WHERE id = ' + id
             )
 }

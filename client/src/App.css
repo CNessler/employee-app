@@ -42,6 +42,15 @@ body {
   float:right;
 }
 
+#edit {
+  float:right;
+  margin-right:5px;
+}
+
+#addButton {
+  margin-top: 5em;
+}
+
 .img-holder {position: relative;}
 .img-holder .link {
     position: absolute;

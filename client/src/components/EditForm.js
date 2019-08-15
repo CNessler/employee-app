@@ -38,23 +38,23 @@ class EditForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
             <label htmlFor="firstName">Enter first name</label>
-            <input id="firstName" name="firstName" type="text" defaultValue={this.state.firstName}/>
+            <input id="firstName" className="form-control" name="firstName" type="text" defaultValue={this.state.firstName}/>
         </div>
         <div className="form-group">
             <label htmlFor="lastName">Enter last name</label>
-            <input id="lastName" name="lastName" type="text" defaultValue={this.state.lastName}/>
+            <input id="lastName" className="form-control" name="lastName" type="text" defaultValue={this.state.lastName}/>
         </div>
         <div className="form-group">
             <label htmlFor="email">Enter your email</label>
-            <input id="email" name="email" type="email" defaultValue={this.state.email}/>
+            <input id="email" className="form-control" name="email" type="email" defaultValue={this.state.email}/>
         </div>
         <div className="form-group">
             <label htmlFor="photoUrl">Enter a url to your photo</label>
-            <input id="photoUrl" name="photoUrl" type="text" defaultValue={this.state.photoUrl}/>
+            <input id="photoUrl" className="form-control" name="photoUrl" type="text" defaultValue={this.state.photoUrl}/>
         </div>
         <div className="form-group">
             <label htmlFor="phone">Enter a phone number</label>
-            <input id="phone" name="phone" type="text" defaultValue={this.state.phone}/>
+            <input id="phone" className="form-control" name="phone" type="text" defaultValue={this.state.phone}/>
         </div>
         <button onClick={this.props.updateNow}>Edit employee</button>
       </form>
