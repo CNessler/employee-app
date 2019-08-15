@@ -9,7 +9,6 @@ function performRequest() {
     res.setEncoding('utf-8');
 
     var responseString = '';
-    var inserts = '';
     res.on('data', function(data) {
       responseString += data;
     });
