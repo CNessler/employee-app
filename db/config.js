@@ -1,16 +1,25 @@
 // db/config.js
+require('dotenv').config()
 
-const options = {
-  query: (e) => {
-  }
-}
+// const options = {
+//   query: (e) => {
+//   }
+// }
+const { Client } = require('pg');
 
-const pgp = require('pg-promise')(options);
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 
-const setDataBase =
-    () => {
-      return pgp({database: 'dfbvp1p3lmbb58', port: 5432, host: 'ec2-54-83-36-37.compute-1.amazonaws.com'})
-    }
+const db = client.connect();
 
-const db = setDataBase();
+// const pgp = require('pg-promise')(options);
+
+// const setDataBase =
+//     () => {
+//       return pgp({database: 'employee-app', port: 5432, host: 'localhost'})
+//     }
+
+// const db = setDataBase();
 module.exports = db;
