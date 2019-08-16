@@ -22,6 +22,8 @@ class AddForm extends React.Component {
             body: JSON.stringify(bodyData),
         });
         event.target.reset();
+        this.setState(this.props.triggerUpdate);
+        window.location.reload();
     }
 
   render() {
