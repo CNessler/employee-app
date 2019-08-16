@@ -42,14 +42,17 @@ npm start
 ```
 vist http://localhost:3000/
 
-##TODOs
+## TODOs/Production Enhancments
 - write tests for server side logic
 - add validation for form
 - add more information for each employee
-- make everything more visually appealing
+- overall design appeal
+- add environment variables
+- have separate development and production builds
+- add client side routing
 
-##Bugs
+## Bugs
 - unable to close form once open -> need to update state
 
-##Challenges
-It's been awhile since I have created an application from scratch so getting back into that flow took me a second. I have also never used postgresql with a node application so that took some understanding.
+## Challenges
+It's been awhile since I have created an application from scratch so getting back into that flow took me a second. I have also never used postgresql with a node application so that took some understanding.  I also struggled to get the react app and node server to cooperate on Heroku. I spent a good amount of time trying to track down my errors but ultimately decided to focus on the code. The backend server can be hit at https://employee-catalogue-app.herokuapp.com/api/employees along with the other endpoints. 
