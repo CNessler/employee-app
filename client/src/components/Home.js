@@ -15,7 +15,7 @@ class Home extends Component {
     }
 
     delete(key){
-        fetch("https://employee-catalogue-app.herokuapp.com/"+key.id, {
+        fetch('http://localhost:9000/api/employees/delete/'+key.id, {
             method: 'POST',
         });
         window.location.reload();
@@ -27,7 +27,7 @@ class Home extends Component {
     }
 
     callAPI() {
-        fetch("https://employee-catalogue-app.herokuapp.com")
+        fetch('http://localhost:9000/api/employees')
             .then(response => response.json())
             .then(data => this.setState({response: data.data}));
     }
@@ -45,7 +45,7 @@ class Home extends Component {
         if(this.state.page === "add") {
             data = <AddForm triggerUpdate={this.updateState}/>;
         } else if(this.state.page === "edit") {
-            data = <EditForm response={this.state.editResponse} triggerUpdate={this.updateState}/>;
+            data = <EditForm response={this.state.editResponse}/>;
         } else {
             data = "";
         }

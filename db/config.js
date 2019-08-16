@@ -9,7 +9,7 @@ const pgp = require('pg-promise')(options);
 
 const setDataBase =
     () => {
-      return pgp(process.env.DATABASE_URL || 'postgresql://heroku:password@localhost:5432/employee-app')
+      return pgp({database: 'employee-app', port: 5432, host: 'localhost'})
     }
 
 const db = setDataBase();
