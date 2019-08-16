@@ -13,7 +13,7 @@ npm install
 ```
 Create & start PostgreSQL DB
 ```bash
-psql createdb employee-app
+createdb employee-app
 ```
 ```bash
 pg_ctl -D /usr/local/var/postgres start
