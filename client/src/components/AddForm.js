@@ -16,7 +16,7 @@ class AddForm extends Component {
             bodyData[name] = data.get(name)
         }
 
-        fetch('http://localhost:9000/api/employees/add', {
+        fetch("https://employee-catalogue-app.herokuapp.com", {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bodyData),

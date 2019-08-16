@@ -15,7 +15,7 @@ class Home extends Component {
     }
 
     delete(key){
-        fetch('http://localhost:9000/api/employees/delete/'+key.id, {
+        fetch("https://employee-catalogue-app.herokuapp.com/"+key.id, {
             method: 'POST',
         });
         window.location.reload();
@@ -27,7 +27,7 @@ class Home extends Component {
     }
 
     callAPI() {
-        fetch('http://localhost:9000/api/employees')
+        fetch("https://employee-catalogue-app.herokuapp.com")
             .then(response => response.json())
             .then(data => this.setState({response: data.data}));
     }

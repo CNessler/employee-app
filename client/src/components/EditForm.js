@@ -23,7 +23,7 @@ class EditForm extends Component {
             bodyData[name] = data.get(name)
         }
 
-        fetch('http://localhost:9000/api/employees/edit/' + this.props.response.id, {
+        fetch("https://employee-catalogue-app.herokuapp.com/" + this.props.response.id, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bodyData),
