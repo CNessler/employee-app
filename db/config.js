@@ -1,25 +1,16 @@
 // db/config.js
-require('dotenv').config()
 
-// const options = {
-//   query: (e) => {
-//   }
-// }
-const { Client } = require('pg');
+const options = {
+  query: (e) => {
+  }
+}
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
+const pgp = require('pg-promise')(options);
 
-const db = client.connect();
+const setDataBase =
+    () => {
+      return pgp(process.env.DATABASE_URL || 'postgresql://heroku:password@localhost:5432/employee-app')
+    }
 
-// const pgp = require('pg-promise')(options);
-
-// const setDataBase =
-//     () => {
-//       return pgp({database: 'employee-app', port: 5432, host: 'localhost'})
-//     }
-
-// const db = setDataBase();
+const db = setDataBase();
 module.exports = db;
