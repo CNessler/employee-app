@@ -13,10 +13,10 @@ npm install
 ```
 Create & start PostgreSQL DB
 ```bash
-createdb employee-app
+pg_ctl -D /usr/local/var/postgres start
 ```
 ```bash
-pg_ctl -D /usr/local/var/postgres start
+createdb employee-app
 ```
 Run migration
 ```bash
@@ -45,11 +45,11 @@ vist http://localhost:3000/
 ##TODOs
 - write tests for server side logic
 - add validation for form
-- make everything more visually appealing
 - add more information for each employee
+- make everything more visually appealing
 
 ##Bugs
 - unable to close form once open -> need to update state
 
-
-
+##Challenges
+It's been awhile since I have created an application from scratch so getting back into that flow took me a second. I have also never used postgresql with a node application so that took some understanding.
