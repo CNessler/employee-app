@@ -3,7 +3,6 @@
 const express = require('express');
 var cors = require("cors");
 const app = express();
-
 // Set the port
 const PORT = process.env.PORT || 9000;
 
@@ -11,7 +10,7 @@ const PORT = process.env.PORT || 9000;
 const path = require('path');
 
 // Static files
-app.use(express.static('build'));
+app.use(express.static('client/build'));
 app.use(cors());
 app.use(require("body-parser").json());
 // API Routes

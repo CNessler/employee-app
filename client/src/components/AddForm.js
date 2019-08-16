@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddForm extends React.Component {
+class AddForm extends Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,6 @@ class AddForm extends React.Component {
         for (let name of data.keys()) {
             bodyData[name] = data.get(name)
         }
-
         fetch('http://localhost:9000/api/employees/add', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
@@ -27,6 +26,7 @@ class AddForm extends React.Component {
     }
 
   render() {
+      console.log("in add form")
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
@@ -49,7 +49,7 @@ class AddForm extends React.Component {
             <label htmlFor="phone">Enter a phone number</label>
             <input id="phone" className="form-control" name="phone" type="text" />
         </div>
-        <button onClick={this.props.triggerUpdate}>Add employee</button>
+        <button>Add employee</button>
       </form>
     );
   }
