@@ -11,9 +11,12 @@ Install dependencies
 ```bash
 npm install
 ```
-Create PostgreSQL DB
+Create & start PostgreSQL DB
 ```bash
 psql createdb employee-app
+```
+```bash
+pg_ctl -D /usr/local/var/postgres start
 ```
 Run migration
 ```bash
