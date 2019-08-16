@@ -45,7 +45,7 @@ class Home extends Component {
         if(this.state.page === "add") {
             data = <AddForm triggerUpdate={this.updateState}/>;
         } else if(this.state.page === "edit") {
-            data = <EditForm response={this.state.editResponse} triggerUpdate={this.updateState}/>;
+            data = <EditForm response={this.state.editResponse}/>;
         } else {
             data = "";
         }

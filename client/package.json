@@ -6,7 +6,7 @@
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.0",
+    "react-scripts": "^3.1.0",
     "reactstrap": "^8.0.1"
   },
   "scripts": {
@@ -30,5 +30,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:9000"
+  "proxy": "https://employee-catalogue-app.herokuapp.com"
 }

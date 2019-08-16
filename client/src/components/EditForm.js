@@ -56,7 +56,7 @@ class EditForm extends Component {
             <label htmlFor="phone">Enter a phone number</label>
             <input id="phone" className="form-control" name="phone" type="text" defaultValue={this.state.phone}/>
         </div>
-        <button onClick={this.props.updateNow}>Edit employee</button>
+        <button>Edit employee</button>
       </form>
     );
   }
