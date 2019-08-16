@@ -3,7 +3,7 @@ import AddForm from './AddForm';
 import EditForm from './EditForm';
 import {Container, Button} from 'reactstrap';
 
-class Home extends React.Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.updateState = this.updateState.bind(this);
@@ -62,7 +62,7 @@ class Home extends React.Component {
                             <Button id="delete" className="btn btn-danger btn-small" onClick={() =>this.delete(response)}>X</Button>
                             <Button id="edit" className="btn btn-small" onClick={() =>this.editState(response)}>edit</Button>
                         </div>
-                        <img className="card-img-top" src={response.picture} alt="Card image cap"/>
+                        <img className="card-img-top" src={response.picture} alt="employee picture"/>
                         <div className="card-body">
                         <h5 className="card-title">{response.first_name} {response.last_name}</h5>
                         <p className="card-text">

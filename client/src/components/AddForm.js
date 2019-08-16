@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddForm extends React.Component {
+class AddForm extends Component {
 
     constructor(props) {
         super(props);
