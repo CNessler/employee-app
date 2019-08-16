@@ -26,7 +26,6 @@ class AddForm extends Component {
     }
 
   render() {
-      console.log("in add form")
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
