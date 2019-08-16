@@ -9,7 +9,7 @@ const pgp = require('pg-promise')(options);
 
 const setDataBase =
     () => {
-      return pgp({database: 'employee-app', port: 5432, host: 'localhost'})
+      return pgp({database: 'dfbvp1p3lmbb58', port: 5432, host: 'ec2-54-83-36-37.compute-1.amazonaws.com'})
     }
 
 const db = setDataBase();
